@@ -1,0 +1,984 @@
+<!DOCTYPE html>
+<html lang="es" data-theme="dark">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>ZOO·XR | Realidad Aumentada, Virtual y Mixta en Zootecnia</title>
+  <meta name="description" content="Descubre cómo la Realidad Aumentada (RA), Realidad Virtual (RV) y Realidad Mixta (RM) transforman la zootecnia profesional y la formación académica de estudiantes.">
+  <meta name="keywords" content="Zootecnia, Realidad Aumentada, Realidad Virtual, Realidad Mixta, XR, Ganadería de Precisión, Anatomía Rumiante, Bienestar Animal">
+  
+  <!-- Google Fonts: Outfit & Plus Jakarta Sans & JetBrains Mono -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;600;700&family=Outfit:wght@400;600;700;800&family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+  
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+  <!-- ==================== NAVIGATION BAR ==================== -->
+  <header class="navbar">
+    <div class="container nav-container">
+      <a href="#" class="brand-logo" aria-label="Inicio ZOO·XR">
+        <div class="brand-icon">
+          <!-- SVG Logo: XR Hologram Prism + Bio Leaf/Animal Glyph -->
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
+            <polygon points="12 2 2 7 12 12 22 7 12 2"></polygon>
+            <polyline points="2 17 12 22 22 17"></polyline>
+            <polyline points="2 12 12 17 22 12"></polyline>
+          </svg>
+        </div>
+        <span class="brand-text">ZOO<span>·XR</span></span>
+      </a>
+
+      <!-- Navigation Menu -->
+      <nav>
+        <ul class="nav-menu" id="nav-menu">
+          <li><a href="#tecnologias" class="nav-link">Tecnologías</a></li>
+          <li><a href="#perspectivas" class="nav-link">Estudiante vs Campo</a></li>
+          <li><a href="#simulador" class="nav-link">Simulador XR</a></li>
+          <li><a href="#etica-bienestar" class="nav-link">Ética 3Rs</a></li>
+          <li><a href="#guia-estudiante" class="nav-link">Guía Inicio</a></li>
+          <li><a href="#faq" class="nav-link">Preguntas</a></li>
+        </ul>
+      </nav>
+
+      <!-- Action Items & Theme Switcher -->
+      <div class="nav-actions">
+        <!-- Theme Toggle Button -->
+        <button id="theme-toggle" class="theme-toggle-btn" aria-label="Cambiar entre modo claro y oscuro">
+          <!-- Sun Icon (Visible in Dark Mode) -->
+          <svg class="theme-icon-sun" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <circle cx="12" cy="12" r="5"></circle>
+            <line x1="12" y1="1" x2="12" y2="3"></line>
+            <line x1="12" y1="21" x2="12" y2="23"></line>
+            <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line>
+            <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line>
+            <line x1="1" y1="12" x2="3" y2="12"></line>
+            <line x1="21" y1="12" x2="23" y2="12"></line>
+            <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line>
+            <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line>
+          </svg>
+          <!-- Moon Icon (Visible in Light Mode) -->
+          <svg class="theme-icon-moon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
+          </svg>
+        </button>
+
+        <a href="#simulador" class="btn btn-primary btn-sm">
+          <span>Probar Simulador</span>
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <line x1="5" y1="12" x2="19" y2="12"></line>
+            <polyline points="12 5 19 12 12 19"></polyline>
+          </svg>
+        </a>
+
+        <!-- Mobile Hamburger Toggle -->
+        <button class="mobile-toggle" id="mobile-toggle" aria-label="Abrir menú de navegación" aria-expanded="false">
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <line x1="3" y1="12" x2="21" y2="12"></line>
+            <line x1="3" y1="6" x2="21" y2="6"></line>
+            <line x1="3" y1="18" x2="21" y2="18"></line>
+          </svg>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <!-- ==================== HERO SECTION ==================== -->
+    <section class="hero">
+      <div class="container hero-grid">
+        <!-- Hero Text Content -->
+        <div class="hero-content">
+          <div class="hero-badge-container">
+            <span class="badge">
+              <span class="badge-dot"></span>
+              Zootecnia 4.0 · Realidad Extendida
+            </span>
+          </div>
+
+          <h1 class="hero-title">
+            El Futuro Inmersivo de la <span class="gradient-text">Ciencia Animal</span>
+          </h1>
+
+          <p class="hero-description">
+            Descubre cómo la <strong>Realidad Aumentada (RA)</strong>, <strong>Virtual (RV)</strong> y <strong>Mixta (RM)</strong> revolucionan la vida profesional en campo y empoderan al <strong>estudiante de zootecnia</strong> con laboratorios holográficos 24/7 y cero estrés animal.
+          </p>
+
+          <div class="hero-actions">
+            <a href="#simulador" class="btn btn-primary">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <circle cx="12" cy="12" r="10"></circle>
+                <polygon points="10 8 16 12 10 16 10 8"></polygon>
+              </svg>
+              <span>Explorar Simulador Interactivo</span>
+            </a>
+            <a href="#perspectivas" class="btn btn-outline">
+              <span>Ver Modo Estudiante</span>
+            </a>
+          </div>
+
+          <div class="hero-metrics">
+            <div class="metric-card">
+              <div class="metric-number">+85<span>%</span></div>
+              <div class="metric-label">Retención anatómica y fisiológica</div>
+            </div>
+            <div class="metric-card">
+              <div class="metric-number">0<span>%</span></div>
+              <div class="metric-label">Estrés animal en prácticas formativas</div>
+            </div>
+            <div class="metric-card">
+              <div class="metric-number">24<span>/7</span></div>
+              <div class="metric-label">Acceso a laboratorios inmersivos</div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Hero Visual: Futuristic Holographic SVG HUD -->
+        <div class="hero-visual-wrapper">
+          <div class="hero-hologram-card">
+            <div class="hologram-header">
+              <span class="hud-tag">HOLOGRAMA VIVO // BOVINE-01</span>
+              <div class="hud-status">
+                <span class="hud-pulse"></span>
+                <span>SINCRONIZADO EN TIEMPO REAL</span>
+              </div>
+            </div>
+
+            <!-- Vector Graphic: Holographic Bovine with Biometrics -->
+            <div class="hero-svg-container">
+              <svg viewBox="0 0 520 340" fill="none" xmlns="http://www.w3.org/2000/svg" class="hero-svg" aria-label="Ilustración vectorial interactiva de bovino holográfico en Zootecnia con telemetría">
+                <defs>
+                  <!-- Glow Filters -->
+                  <filter id="glow-emerald" x="-20%" y="-20%" width="140%" height="140%">
+                    <feGaussianBlur stdDeviation="6" result="blur" />
+                    <feComposite in="SourceGraphic" in2="blur" operator="over" />
+                  </filter>
+                  <filter id="glow-cyan" x="-20%" y="-20%" width="140%" height="140%">
+                    <feGaussianBlur stdDeviation="5" result="blur" />
+                    <feComposite in="SourceGraphic" in2="blur" operator="over" />
+                  </filter>
+                  <!-- Holographic Grid Pattern -->
+                  <pattern id="grid-pattern" width="20" height="20" patternUnits="userSpaceOnUse">
+                    <line x1="0" y1="0" x2="20" y2="0" stroke="var(--border-subtle)" stroke-width="0.5" opacity="0.3"/>
+                    <line x1="0" y1="0" x2="0" y2="20" stroke="var(--border-subtle)" stroke-width="0.5" opacity="0.3"/>
+                  </pattern>
+                  <!-- Gradients -->
+                  <linearGradient id="body-grad" x1="0%" y1="0%" x2="100%" y2="100%">
+                    <stop offset="0%" stop-color="var(--accent-emerald)" stop-opacity="0.25"/>
+                    <stop offset="100%" stop-color="var(--accent-cyan)" stop-opacity="0.08"/>
+                  </linearGradient>
+                  <linearGradient id="rumen-grad" x1="0%" y1="0%" x2="100%" y2="100%">
+                    <stop offset="0%" stop-color="var(--accent-emerald)" stop-opacity="0.8"/>
+                    <stop offset="100%" stop-color="var(--accent-cyan)" stop-opacity="0.5"/>
+                  </linearGradient>
+                </defs>
+
+                <!-- Hologram Base Floor Grid & Rings -->
+                <ellipse cx="260" cy="300" rx="210" ry="32" fill="url(#grid-pattern)" />
+                <ellipse cx="260" cy="300" rx="180" ry="24" stroke="var(--accent-emerald)" stroke-width="1.2" stroke-dasharray="6 4" opacity="0.6"/>
+                <ellipse cx="260" cy="300" rx="130" ry="16" stroke="var(--accent-cyan)" stroke-width="1" opacity="0.4"/>
+
+                <!-- Hologram Vertical Projection Cones -->
+                <line x1="90" y1="298" x2="110" y2="130" stroke="var(--accent-emerald)" stroke-width="0.75" stroke-dasharray="3 3" opacity="0.3"/>
+                <line x1="430" y1="298" x2="400" y2="130" stroke="var(--accent-emerald)" stroke-width="0.75" stroke-dasharray="3 3" opacity="0.3"/>
+
+                <!-- Holographic Bovine Silhouette Wireframe (High precision vectors) -->
+                <!-- Bovine Torso & Body -->
+                <path d="M 125 190 C 130 145, 170 140, 210 142 C 250 144, 320 135, 365 145 C 385 150, 405 130, 425 125 C 440 120, 445 135, 435 155 C 425 170, 410 185, 400 205 C 390 220, 395 245, 390 270 L 375 270 L 370 225 C 360 230, 320 235, 275 235 C 230 235, 205 230, 195 225 L 190 270 L 175 270 C 170 240, 160 215, 140 210 L 125 210 Z" 
+                      fill="url(#body-grad)" stroke="var(--accent-cyan)" stroke-width="1.75" stroke-linejoin="round" />
+
+                <!-- Front Legs Wireframe -->
+                <path d="M 370 210 L 378 275 L 366 275 L 360 220" stroke="var(--accent-cyan)" stroke-width="1.2" opacity="0.8"/>
+                <path d="M 392 205 L 400 275 L 388 275 L 382 220" stroke="var(--accent-emerald)" stroke-width="1.5"/>
+
+                <!-- Rear Legs Wireframe -->
+                <path d="M 170 215 L 175 275 L 163 275 L 158 225" stroke="var(--accent-cyan)" stroke-width="1.2" opacity="0.8"/>
+                <path d="M 190 215 L 195 275 L 183 275 L 178 225" stroke="var(--accent-emerald)" stroke-width="1.5"/>
+
+                <!-- Head & Muzzle Wireframe -->
+                <path d="M 425 125 L 448 135 L 440 160 L 415 155 Z" fill="none" stroke="var(--accent-emerald)" stroke-width="1.5"/>
+                <path d="M 432 120 L 436 108 L 442 122" stroke="var(--accent-cyan)" stroke-width="1.4"/> <!-- Ear / Horn -->
+
+                <!-- Internal Holographic Rumen / Polygastric Anatomy Layer -->
+                <path d="M 210 160 C 235 150, 290 152, 305 168 C 320 184, 305 215, 270 220 C 235 225, 200 210, 195 190 C 190 170, 195 165, 210 160 Z" 
+                      fill="url(#rumen-grad)" stroke="var(--accent-emerald)" stroke-width="1.8" filter="url(#glow-emerald)"/>
+                
+                <!-- Internal Reticulum / Omasum Highlights -->
+                <circle cx="312" cy="188" r="14" fill="none" stroke="var(--accent-cyan)" stroke-width="1.5" stroke-dasharray="3 2" filter="url(#glow-cyan)"/>
+                <path d="M 312 188 L 340 175" stroke="var(--accent-cyan)" stroke-width="1"/>
+                <text x="345" y="178" fill="var(--accent-cyan)" font-family="var(--font-mono)" font-size="9" font-weight="600">RETÍCULO / OMASO</text>
+
+                <!-- AR Targeting Reticles & HUD Node Overlays -->
+                <!-- Heart Rate Node -->
+                <g transform="translate(350, 195)">
+                  <circle cx="0" cy="0" r="10" fill="none" stroke="var(--accent-emerald)" stroke-width="1.2" stroke-dasharray="3 2"/>
+                  <circle cx="0" cy="0" r="4" fill="var(--accent-emerald)"/>
+                  <line x1="12" y1="-8" x2="35" y2="-20" stroke="var(--accent-emerald)" stroke-width="1"/>
+                  <line x1="35" y1="-20" x2="80" y2="-20" stroke="var(--accent-emerald)" stroke-width="1"/>
+                  <text x="85" y="-17" fill="var(--text-main)" font-family="var(--font-mono)" font-size="9.5" font-weight="700">72 BPM</text>
+                  <text x="85" y="-7" fill="var(--text-muted)" font-family="var(--font-mono)" font-size="7.5">RITMO CARDÍACO</text>
+                </g>
+
+                <!-- Rumen Fermentation Node -->
+                <g transform="translate(245, 185)">
+                  <circle cx="0" cy="0" r="12" fill="none" stroke="var(--accent-cyan)" stroke-width="1" stroke-dasharray="2 3"/>
+                  <circle cx="0" cy="0" r="4" fill="var(--accent-cyan)"/>
+                  <line x1="-12" y1="-10" x2="-35" y2="-30" stroke="var(--accent-cyan)" stroke-width="1"/>
+                  <line x1="-35" y1="-30" x2="-80" y2="-30" stroke="var(--accent-cyan)" stroke-width="1"/>
+                  <text x="-135" y="-27" fill="var(--text-main)" font-family="var(--font-mono)" font-size="9.5" font-weight="700">pH 6.42</text>
+                  <text x="-135" y="-17" fill="var(--text-muted)" font-family="var(--font-mono)" font-size="7.5">FERMENTACIÓN RUMINAL</text>
+                </g>
+
+                <!-- RFID Ear Tag Recognition -->
+                <g transform="translate(435, 120)">
+                  <rect x="-8" y="-8" width="16" height="16" fill="none" stroke="var(--accent-emerald)" stroke-width="1.2"/>
+                  <line x1="10" y1="0" x2="28" y2="0" stroke="var(--accent-emerald)" stroke-width="1"/>
+                  <text x="32" y="3" fill="var(--accent-emerald)" font-family="var(--font-mono)" font-size="8.5" font-weight="700">RFID #4028</text>
+                </g>
+
+                <!-- Thermal Sensor Scan Lines -->
+                <line x1="110" y1="110" x2="450" y2="110" stroke="var(--accent-cyan)" stroke-width="1" stroke-dasharray="8 6" opacity="0.4"/>
+                <line x1="110" y1="240" x2="450" y2="240" stroke="var(--accent-emerald)" stroke-width="1" stroke-dasharray="8 6" opacity="0.3"/>
+              </svg>
+            </div>
+
+            <!-- Floating Telemetry Glass Panel -->
+            <div class="floating-telemetry-panel">
+              <div class="telemetry-row">
+                <span class="telemetry-name">Condición Corporal:</span>
+                <span class="telemetry-val">3.5 / 5.0 (BCS)</span>
+              </div>
+              <div class="telemetry-row">
+                <span class="telemetry-name">Temperatura Flanco:</span>
+                <span class="telemetry-val">38.6 °C</span>
+              </div>
+              <div class="telemetry-row">
+                <span class="telemetry-name">Actividad de Rumia:</span>
+                <span class="telemetry-val">485 min / 24h</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ==================== XR MODALITIES (RA vs RV vs RM) ==================== -->
+    <section class="section" id="tecnologias">
+      <div class="container">
+        <div class="section-header">
+          <span class="section-subtitle">El Ecosistema Inmersivo</span>
+          <h2 class="section-title">Comprendiendo las 3 Realidades en Zootecnia</h2>
+          <p class="section-description">
+            Cada tecnología aporta capacidades específicas: desde la superposición de datos en campo en tiempo real hasta la simulación de escenarios biológicos complejos y gemelos digitales interactivos.
+          </p>
+        </div>
+
+        <div class="xr-cards-grid">
+          <!-- Card 1: Realidad Aumentada (RA) -->
+          <article class="xr-card card-ar">
+            <div class="xr-card-header">
+              <div class="xr-icon-bubble">
+                <!-- AR Icon SVG -->
+                <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                  <path d="M21 8V5a2 2 0 0 0-2-2H5a2 2 0 0 0-2 2v3"></path>
+                  <path d="M21 16v3a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-3"></path>
+                  <circle cx="12" cy="12" r="3"></circle>
+                  <path d="M12 7v2"></path>
+                  <path d="M12 15v2"></path>
+                </svg>
+              </div>
+              <span class="xr-acronym">RA</span>
+            </div>
+
+            <h3 class="xr-card-title">Realidad Aumentada</h3>
+            <p class="xr-card-desc">
+              Superpone información digital, métricas biométricas e indicadores directamente sobre el animal vivo o el establo sin aislar al profesional del entorno real.
+            </p>
+
+            <ul class="xr-features-list">
+              <li>
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                <span>Lectura instantánea de collares IoT y aretes RFID.</span>
+              </li>
+              <li>
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                <span>Estimación óptica de peso y condición corporal (BCS) mediante LiDAR.</span>
+              </li>
+              <li>
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                <span>Detección de puntos calientes de inflamación o mastitis con termografía AR.</span>
+              </li>
+            </ul>
+          </article>
+
+          <!-- Card 2: Realidad Virtual (RV) -->
+          <article class="xr-card card-vr">
+            <div class="xr-card-header">
+              <div class="xr-icon-bubble">
+                <!-- VR Headset Icon SVG -->
+                <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                  <path d="M3 8a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2v8a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8z"></path>
+                  <circle cx="8" cy="12" r="2"></circle>
+                  <circle cx="16" cy="12" r="2"></circle>
+                  <path d="M10 16c1-1 3-1 4 0"></path>
+                </svg>
+              </div>
+              <span class="xr-acronym">RV</span>
+            </div>
+
+            <h3 class="xr-card-title">Realidad Virtual</h3>
+            <p class="xr-card-desc">
+              Sumerge al usuario en un entorno 100% sintético e interactivo. Ideal para entrenar procedimientos de alto riesgo biológico, bioseguridad y visitas remotas a fincas.
+            </p>
+
+            <ul class="xr-features-list">
+              <li>
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                <span>Simulacros de partos distócicos y emergencias sin dolor para la madre.</span>
+              </li>
+              <li>
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                <span>Recorridos 360° en plantas de beneficio y salas de incubación de alta bioseguridad.</span>
+              </li>
+              <li>
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                <span>Auditoría de bienestar animal y comportamiento de rebaño sin perturbaciones.</span>
+              </li>
+            </ul>
+          </article>
+
+          <!-- Card 3: Realidad Mixta (RM) -->
+          <article class="xr-card card-mr">
+            <div class="xr-card-header">
+              <div class="xr-icon-bubble">
+                <!-- MR Icon SVG -->
+                <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                  <polygon points="12 2 2 7 12 12 22 7 12 2"></polygon>
+                  <polyline points="2 17 12 22 22 17"></polyline>
+                  <polyline points="2 12 12 17 22 12"></polyline>
+                  <circle cx="12" cy="12" r="3"></circle>
+                </svg>
+              </div>
+              <span class="xr-acronym">RM</span>
+            </div>
+
+            <h3 class="xr-card-title">Realidad Mixta</h3>
+            <p class="xr-card-desc">
+              Permite que objetos físicos y hologramas digitales coexistan e interactúen espacialmente en tiempo real, integrando instrumental real con simulaciones complejas.
+            </p>
+
+            <ul class="xr-features-list">
+              <li>
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                <span>Simuladores de palpación rectal e inseminación con retroalimentación de fuerza háptica.</span>
+              </li>
+              <li>
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                <span>Despliegue holográfico 3D de anatomía de rumiantes y monogástricos a escala 1:1.</span>
+              </li>
+              <li>
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                <span>Gemelos digitales de establos donde ajustar comederos físicos y prever ventilación.</span>
+              </li>
+            </ul>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- ==================== DUAL PERSPECTIVE (STUDENT VS PROFESSIONAL) ==================== -->
+    <section class="section perspective-section" id="perspectivas">
+      <div class="container">
+        <div class="section-header">
+          <span class="section-subtitle">Doble Perspectiva</span>
+          <h2 class="section-title">El Ecosistema XR para el Estudiante y el Profesional</h2>
+          <p class="section-description">
+            Explora cómo las herramientas inmersivas potencian cada etapa de tu carrera: desde acelerar el aprendizaje universitario hasta liderar explotaciones ganaderas de precisión.
+          </p>
+        </div>
+
+        <!-- Perspective Selector Tabs -->
+        <div class="perspective-toggle-container">
+          <div class="perspective-tab-group" role="tablist">
+            <button class="perspective-tab active" data-target="panel-estudiante" role="tab" aria-selected="true">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M22 10v6M2 10l10-5 10 5-10 5z"></path>
+                <path d="M6 12v5c3 3 9 3 12 0v-5"></path>
+              </svg>
+              <span>Como Estudiante de Zootecnia</span>
+            </button>
+            <button class="perspective-tab" data-target="panel-profesional" role="tab" aria-selected="false">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"></path>
+                <circle cx="12" cy="7" r="4"></circle>
+              </svg>
+              <span>Como Zootecnista Profesional</span>
+            </button>
+          </div>
+        </div>
+
+        <!-- PANEL 1: ESTUDIANTE -->
+        <div class="perspective-panel active" id="panel-estudiante" role="tabpanel">
+          <div class="perspective-content-grid">
+            <div class="perspective-items">
+              <div class="perspective-item">
+                <div class="item-icon-box">
+                  <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"></circle><path d="M12 6v6l4 2"></path></svg>
+                </div>
+                <div>
+                  <h4 class="item-title">Laboratorios Holográficos 24/7</h4>
+                  <p class="item-desc">
+                    Estudia la anatomía funcional de bovinos, porcinos y aves sin depender de salas de disección restringidas. Rota órganos, aísla el tracto digestivo y simula el flujo de bolo alimenticio con tus manos.
+                  </p>
+                </div>
+              </div>
+
+              <div class="perspective-item">
+                <div class="item-icon-box">
+                  <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 8h1a4 4 0 0 1 0 8h-1"></path><path d="M2 8h16v9a4 4 0 0 1-4 4H6a4 4 0 0 1-4-4V8z"></path><line x1="6" y1="1" x2="6" y2="4"></line><line x1="10" y1="1" x2="10" y2="4"></line><line x1="14" y1="1" x2="14" y2="4"></line></svg>
+                </div>
+                <div>
+                  <h4 class="item-title">Simulación Nutricional en Rumen</h4>
+                  <p class="item-desc">
+                    Visualiza en Realidad Mixta cómo las dietas ricas en forraje vs. concentrado alteran la fermentación microbiana, la producción de ácidos grasos volátiles (AGVs) y el riesgo de acidosis ruminal.
+                  </p>
+                </div>
+              </div>
+
+              <div class="perspective-item">
+                <div class="item-icon-box">
+                  <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M14 9V5a3 3 0 0 0-3-3l-4 9v11h11.28a2 2 0 0 0 2-1.7l1.38-9a2 2 0 0 0-2-2.3zM7 22H4a2 2 0 0 1-2-2v-7a2 2 0 0 1 2-2h3"></path></svg>
+                </div>
+                <div>
+                  <h4 class="item-title">Práctica Háptica de Inseminación Artificial</h4>
+                  <p class="item-desc">
+                    Desarrolla memoria muscular y precisión táctil localizando el cérvix mediante guantes hápticos en modelos virtuales antes de realizar la primera palpación en una vaca viva, reduciendo errores y molestias al animal.
+                  </p>
+                </div>
+              </div>
+            </div>
+
+            <!-- Student Graphic Showcase Box -->
+            <div class="perspective-showcase-box">
+              <span class="badge showcase-badge">Enfoque Académico</span>
+              <svg viewBox="0 0 450 320" fill="none" xmlns="http://www.w3.org/2000/svg" class="showcase-svg">
+                <!-- University Holographic Studio Vector -->
+                <rect width="450" height="320" rx="16" fill="var(--bg-surface-elevated)"/>
+                
+                <!-- Hologram Base Plate -->
+                <ellipse cx="225" cy="250" rx="140" ry="25" fill="var(--accent-emerald-glow)"/>
+                <ellipse cx="225" cy="250" rx="110" ry="18" stroke="var(--accent-emerald)" stroke-width="1.5" stroke-dasharray="4 4"/>
+
+                <!-- Student Silhouette with XR Headset -->
+                <g transform="translate(70, 110)">
+                  <circle cx="30" cy="25" r="18" fill="var(--text-muted)"/> <!-- Head -->
+                  <rect x="35" y="18" width="18" height="12" rx="4" fill="var(--accent-cyan)"/> <!-- VR Goggles -->
+                  <path d="M 12 55 C 15 45, 45 45, 48 55 L 55 120 L 5 120 Z" fill="var(--text-faint)"/> <!-- Body -->
+                  <line x1="45" y1="65" x2="80" y2="45" stroke="var(--accent-cyan)" stroke-width="2.5" stroke-linecap="round"/> <!-- Raised Arm interacting -->
+                  <circle cx="85" cy="42" r="5" fill="var(--accent-cyan)"/> <!-- Hand interaction pinch -->
+                </g>
+
+                <!-- Floating Holographic Stomach Diagram (Ruminant) -->
+                <g transform="translate(190, 75)">
+                  <!-- Rumen -->
+                  <path d="M 40 40 C 70 20, 140 30, 150 70 C 160 110, 130 145, 80 140 C 30 135, 10 110, 20 70 Z" 
+                        fill="url(#rumen-grad)" stroke="var(--accent-emerald)" stroke-width="2" filter="url(#glow-emerald)"/>
+                  <text x="65" y="90" fill="#ffffff" font-family="var(--font-heading)" font-size="14" font-weight="800">RUMEN</text>
+                  <text x="65" y="105" fill="var(--accent-cyan)" font-family="var(--font-mono)" font-size="9">180L · pH 6.5</text>
+
+                  <!-- Reticulum -->
+                  <path d="M 150 70 C 180 60, 200 80, 195 105 C 190 125, 160 130, 145 110 Z" 
+                        fill="var(--accent-cyan-glow)" stroke="var(--accent-cyan)" stroke-width="1.5"/>
+                  <text x="175" y="145" fill="var(--accent-cyan)" font-family="var(--font-mono)" font-size="8.5" font-weight="700">RETÍCULO</text>
+                  <line x1="175" y1="135" x2="175" y2="115" stroke="var(--accent-cyan)" stroke-width="1"/>
+
+                  <!-- Holographic Rays linking student hand to rumen -->
+                  <line x1="-35" y1="77" x2="35" y2="65" stroke="var(--accent-cyan)" stroke-width="1" stroke-dasharray="3 3"/>
+                </g>
+              </svg>
+            </div>
+          </div>
+        </div>
+
+        <!-- PANEL 2: PROFESIONAL -->
+        <div class="perspective-panel" id="panel-profesional" role="tabpanel">
+          <div class="perspective-content-grid">
+            <div class="perspective-items">
+              <div class="perspective-item">
+                <div class="item-icon-box">
+                  <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"></circle><line x1="22" y1="12" x2="18" y2="12"></line><line x1="6" y1="12" x2="2" y2="12"></line><line x1="12" y1="6" x2="12" y2="2"></line><line x1="12" y1="22" x2="12" y2="18"></line></svg>
+                </div>
+                <div>
+                  <h4 class="item-title">Inspección de Lote con Gafas Inteligentes (HUD)</h4>
+                  <p class="item-desc">
+                    Camina por los corrales mientras tus gafas inteligentes proyectan el historial productivo, días en lactancia, fecha probable de parto y alertas de celo flotando sobre cada vaca identificada por RFID o visión facial.
+                  </p>
+                </div>
+              </div>
+
+              <div class="perspective-item">
+                <div class="item-icon-box">
+                  <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 3v18h18"></path><path d="M18 17l-5-5-4 4-4-5"></path></svg>
+                </div>
+                <div>
+                  <h4 class="item-title">Evaluación Lineal y Score Corporal Óptico</h4>
+                  <p class="item-desc">
+                    Sensores de profundidad y algoritmos de IA en RA miden automáticamente el ángulo de grupa, profundidad de ubre y volumen muscular, eliminando el sesgo subjetivo en la clasificación zootécnica.
+                  </p>
+                </div>
+              </div>
+
+              <div class="perspective-item">
+                <div class="item-icon-box">
+                  <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M16.5 9.4 7.55 4.24a1.78 1.78 0 0 0-2.5 1.55v12.42a1.78 1.78 0 0 0 2.5 1.55L16.5 14.6a1.78 1.78 0 0 0 0-3.2z"></path><path d="M21 6v12"></path></svg>
+                </div>
+                <div>
+                  <h4 class="item-title">Gemelos Digitales de Galpones y Establo</h4>
+                  <p class="item-desc">
+                    Modela la nave lechera o el galpón avícola en Realidad Mixta antes de invertir en infraestructura. Simula la dinámica de fluidos de ventilación, sombras en comederos y zonas de confort térmico para prevenir estrés calórico.
+                  </p>
+                </div>
+              </div>
+            </div>
+
+            <!-- Professional Graphic Showcase Box -->
+            <div class="perspective-showcase-box">
+              <span class="badge showcase-badge">Enfoque Profesional</span>
+              <svg viewBox="0 0 450 320" fill="none" xmlns="http://www.w3.org/2000/svg" class="showcase-svg">
+                <!-- Field Dairy Barn with AR Overlays -->
+                <rect width="450" height="320" rx="16" fill="var(--bg-surface-elevated)"/>
+                
+                <!-- Barn Structural Grid Lines -->
+                <line x1="30" y1="60" x2="420" y2="60" stroke="var(--border-subtle)" stroke-width="1.5"/>
+                <line x1="80" y1="60" x2="50" y2="280" stroke="var(--border-subtle)" stroke-width="1.5"/>
+                <line x1="370" y1="60" x2="400" y2="280" stroke="var(--border-subtle)" stroke-width="1.5"/>
+
+                <!-- Professional Silhouette with AR Glasses & Tablet -->
+                <g transform="translate(80, 130)">
+                  <circle cx="20" cy="20" r="14" fill="var(--text-muted)"/>
+                  <rect x="24" y="16" width="12" height="6" rx="2" fill="var(--accent-emerald)"/> <!-- AR Glasses -->
+                  <path d="M 8 42 C 10 35, 30 35, 32 42 L 35 110 L 5 110 Z" fill="var(--text-faint)"/>
+                  <rect x="25" y="55" width="22" height="30" rx="3" fill="var(--accent-cyan)" opacity="0.9"/> <!-- Smart Tablet -->
+                </g>
+
+                <!-- Target Livestock in Barn Stall -->
+                <g transform="translate(230, 120)">
+                  <!-- Stylized Cow Contour -->
+                  <path d="M 20 90 C 30 50, 70 45, 110 45 C 130 50, 140 40, 155 45 L 160 70 L 145 75 L 140 120 L 115 120 L 110 85 C 80 88, 55 95, 45 120 L 25 120 Z" 
+                        fill="none" stroke="var(--accent-emerald)" stroke-width="1.5"/>
+
+                  <!-- AR Scanning Bounding Box -->
+                  <rect x="10" y="30" width="160" height="100" fill="none" stroke="var(--accent-emerald)" stroke-width="1" stroke-dasharray="6 4"/>
+                  
+                  <!-- AR Floating Metadata Bubble -->
+                  <g transform="translate(15, -20)">
+                    <rect width="140" height="42" rx="6" fill="var(--bg-surface)" stroke="var(--accent-emerald)" stroke-width="1.2"/>
+                    <text x="10" y="16" fill="var(--accent-emerald)" font-family="var(--font-mono)" font-size="9" font-weight="700">LOTE ALTA PRODUCCIÓN</text>
+                    <text x="10" y="32" fill="var(--text-main)" font-family="var(--font-mono)" font-size="10">34.2 L/DÍA · BCS 3.25</text>
+                  </g>
+                </g>
+              </svg>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ==================== INTERACTIVE XR SIMULATOR ==================== -->
+    <section class="section" id="simulador">
+      <div class="container">
+        <div class="section-header">
+          <span class="section-subtitle">Simulador en Vivo</span>
+          <h2 class="section-title">Visor Interactivo Zootécnico XR</h2>
+          <p class="section-description">
+            Experimenta en directo la diferencia entre la visión normal de campo, la capa de datos biométricos de Realidad Aumentada (RA), el corte anatómico de Realidad Mixta (RM) y la simulación bioclimática de Realidad Virtual (RV).
+          </p>
+        </div>
+
+        <div class="simulator-container">
+          <!-- Top Controls Toolbar -->
+          <div class="simulator-toolbar">
+            <div class="sim-info">
+              <span class="sim-dot"></span>
+              <span class="sim-title" id="sim-active-label">SENSOR BIOMÉTRICO ACTIVO</span>
+            </div>
+
+            <div class="sim-mode-selector" role="radiogroup" aria-label="Modos de Realidad Extendida">
+              <button class="sim-mode-btn" data-mode="normal" role="radio" aria-checked="false">
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"></circle><circle cx="12" cy="12" r="3"></circle></svg>
+                <span>Cámara Real</span>
+              </button>
+              <button class="sim-mode-btn active" data-mode="ar" role="radio" aria-checked="true">
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 8V5a2 2 0 0 0-2-2H5a2 2 0 0 0-2 2v3"></path><path d="M21 16v3a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-3"></path><circle cx="12" cy="12" r="3"></circle></svg>
+                <span>Modo RA (HUD)</span>
+              </button>
+              <button class="sim-mode-btn" data-mode="mr" role="radio" aria-checked="false">
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polygon points="12 2 2 7 12 12 22 7 12 2"></polygon><polyline points="2 17 12 22 22 17"></polyline><polyline points="2 12 12 17 22 12"></polyline></svg>
+                <span>Modo RM (Anatomía)</span>
+              </button>
+              <button class="sim-mode-btn" data-mode="vr" role="radio" aria-checked="false">
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 8a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2v8a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8z"></path><circle cx="8" cy="12" r="2"></circle><circle cx="16" cy="12" r="2"></circle></svg>
+                <span>Modo RV (Clima)</span>
+              </button>
+            </div>
+          </div>
+
+          <!-- Simulator Body: Viewport + Live Telemetry Sidebar -->
+          <div class="simulator-viewport-grid">
+            <!-- Left Viewport with Animated Dynamic SVG Layers -->
+            <div class="simulator-canvas-area">
+              <div class="sim-overlay-hud" id="sim-hud-status-text">
+                RA ACTIVA · TELEMETRÍA BIOMÉTRICA CONECTADA
+              </div>
+
+              <div class="sim-svg-wrapper">
+                <svg viewBox="0 0 500 340" fill="none" xmlns="http://www.w3.org/2000/svg" class="sim-svg-main" id="sim-canvas-svg">
+                  <!-- Ground / Grass Silhouette Base -->
+                  <ellipse cx="250" cy="300" rx="200" ry="24" fill="var(--bg-surface-elevated)" opacity="0.6"/>
+
+                  <!-- LAYER 0: BASE BOVINE SILHOUETTE (Visible across modes) -->
+                  <g id="sim-layer-normal" class="sim-layer">
+                    <!-- Cow Body Contour -->
+                    <path d="M 120 185 C 125 140, 160 135, 210 137 C 255 139, 335 130, 375 140 C 395 145, 410 125, 430 120 C 445 118, 450 132, 440 152 C 430 168, 415 180, 405 200 L 398 275 L 382 275 L 375 220 C 365 225, 315 230, 270 230 C 225 230, 200 225, 192 220 L 185 275 L 170 275 C 165 235, 155 210, 135 205 L 120 205 Z" 
+                          fill="var(--bg-surface)" stroke="var(--text-muted)" stroke-width="2" stroke-linejoin="round"/>
+                    <!-- Legs & Details -->
+                    <path d="M 378 205 L 382 275 L 372 275 L 366 215" stroke="var(--text-muted)" stroke-width="1.5"/>
+                    <path d="M 172 210 L 176 275 L 166 275 L 160 215" stroke="var(--text-muted)" stroke-width="1.5"/>
+                    <!-- Horns & Ears -->
+                    <path d="M 432 118 L 436 104 L 442 118" stroke="var(--text-muted)" stroke-width="1.5"/>
+                    <!-- Spots (Holstein) -->
+                    <path d="M 230 145 C 245 145, 260 160, 255 180 C 245 195, 220 190, 215 170 C 210 155, 220 145, 230 145 Z" fill="var(--bg-surface-elevated)"/>
+                    <path d="M 320 150 C 345 145, 355 165, 350 185 C 340 195, 325 185, 315 175 C 310 160, 315 150, 320 150 Z" fill="var(--bg-surface-elevated)"/>
+                  </g>
+
+                  <!-- LAYER 1: AUGMENTED REALITY (RA) HUD -->
+                  <g id="sim-layer-ar" class="sim-layer">
+                    <!-- Optical BCS Scanning Grid -->
+                    <rect x="110" y="115" width="345" height="165" fill="none" stroke="var(--accent-cyan)" stroke-width="1" stroke-dasharray="5 5" opacity="0.7"/>
+                    
+                    <!-- Corner Reticles -->
+                    <path d="M 110 135 L 110 115 L 130 115" stroke="var(--accent-cyan)" stroke-width="2"/>
+                    <path d="M 435 115 L 455 115 L 455 135" stroke="var(--accent-cyan)" stroke-width="2"/>
+                    <path d="M 110 260 L 110 280 L 130 280" stroke="var(--accent-cyan)" stroke-width="2"/>
+                    <path d="M 435 280 L 455 280 L 455 260" stroke="var(--accent-cyan)" stroke-width="2"/>
+
+                    <!-- Thermal Scan Indicator over Flank -->
+                    <circle cx="270" cy="180" r="22" fill="var(--accent-emerald-glow)" stroke="var(--accent-emerald)" stroke-width="1.5" stroke-dasharray="3 2"/>
+                    <line x1="292" y1="180" x2="330" y2="180" stroke="var(--accent-emerald)" stroke-width="1.2"/>
+                    <text x="335" y="184" fill="var(--accent-emerald)" font-family="var(--font-mono)" font-size="9" font-weight="700">38.6°C TERMOGRAMA</text>
+
+                    <!-- RFID Ear Tag Recognition Box -->
+                    <rect x="430" y="108" width="16" height="16" fill="var(--accent-cyan-glow)" stroke="var(--accent-cyan)" stroke-width="1.5"/>
+                    <line x1="438" y1="108" x2="438" y2="85" stroke="var(--accent-cyan)" stroke-width="1"/>
+                    <text x="400" y="80" fill="var(--accent-cyan)" font-family="var(--font-mono)" font-size="8.5" font-weight="700">TAG RFID: #4028</text>
+
+                    <!-- Heart Rate Radar -->
+                    <circle cx="370" cy="190" r="14" fill="none" stroke="var(--accent-emerald)" stroke-width="1.2"/>
+                    <circle cx="370" cy="190" r="5" fill="var(--accent-emerald)"/>
+                    <text x="350" y="220" fill="var(--accent-emerald)" font-family="var(--font-mono)" font-size="8.5" font-weight="700">72 BPM (SANO)</text>
+                  </g>
+
+                  <!-- LAYER 2: MIXED REALITY (RM) ANATOMICAL HOLOGRAPHIC CUTAWAY -->
+                  <g id="sim-layer-mr" class="sim-layer hidden">
+                    <!-- Transparent Holographic Stomach Anatomy -->
+                    <!-- Rumen (Large green glowing sac) -->
+                    <path d="M 195 155 C 220 145, 275 148, 290 162 C 305 178, 290 205, 260 210 C 225 215, 190 200, 185 180 C 180 165, 185 160, 195 155 Z" 
+                          fill="url(#rumen-grad)" stroke="var(--accent-emerald)" stroke-width="2" class="sim-hotspot" data-info="RUMEN (Panza): Cámara de fermentación anaerobia de ~180 litros. Descompone celulosa mediante bacterias, protozoos y hongos." style="cursor:pointer;"/>
+
+                    <!-- Reticulum (Honeycomb structure) -->
+                    <circle cx="300" cy="175" r="15" fill="var(--accent-cyan-glow)" stroke="var(--accent-cyan)" stroke-width="1.8" class="sim-hotspot" data-info="RETÍCULO (Bonete): Encargado del movimiento y regurgitación del bolo alimenticio hacia la boca para la rumia." style="cursor:pointer;"/>
+
+                    <!-- Omasum (Book stomach) -->
+                    <ellipse cx="285" cy="195" rx="14" ry="10" fill="var(--accent-purple-glow)" stroke="var(--accent-purple)" stroke-width="1.8" class="sim-hotspot" data-info="OMASO (Librillo): Absorbe grandes cantidades de agua, sodio y ácidos grasos volátiles residuales." style="cursor:pointer;"/>
+
+                    <!-- Abomasum (True stomach) -->
+                    <ellipse cx="255" cy="212" rx="18" ry="8" fill="var(--accent-amber)" opacity="0.75" stroke="var(--accent-amber)" stroke-width="1.8" class="sim-hotspot" data-info="ABOMASO (Cuajar): El estómago glandular verdadero con secreción de ácido clorhídrico y pepsina." style="cursor:pointer;"/>
+
+                    <!-- Interactive Anatomical Labels -->
+                    <text x="215" y="185" fill="#ffffff" font-family="var(--font-heading)" font-size="11" font-weight="800" pointer-events="none">RUMEN</text>
+                    <text x="320" y="172" fill="var(--accent-cyan)" font-family="var(--font-mono)" font-size="8" font-weight="700" pointer-events="none">RETÍCULO</text>
+                    <text x="302" y="200" fill="var(--accent-purple)" font-family="var(--font-mono)" font-size="8" font-weight="700" pointer-events="none">OMASO</text>
+                    <text x="235" y="230" fill="var(--accent-amber)" font-family="var(--font-mono)" font-size="8" font-weight="700" pointer-events="none">ABOMASO</text>
+                  </g>
+
+                  <!-- LAYER 3: VIRTUAL REALITY (RV) BIOCLIMATIC ENVIRONMENT -->
+                  <g id="sim-layer-vr" class="sim-layer hidden">
+                    <!-- Environmental Barn Airflow Vector Streams -->
+                    <path d="M 50 130 Q 150 90 260 120 T 450 100" stroke="var(--accent-cyan)" stroke-width="2" stroke-dasharray="8 4" opacity="0.8"/>
+                    <path d="M 40 160 Q 160 120 280 150 T 460 130" stroke="var(--accent-cyan)" stroke-width="2" stroke-dasharray="8 4" opacity="0.6"/>
+                    <path d="M 60 210 Q 170 170 290 200 T 470 180" stroke="var(--accent-emerald)" stroke-width="2" stroke-dasharray="8 4" opacity="0.7"/>
+
+                    <!-- Thermal Heat Comfort Zone Ceiling Sensor -->
+                    <polygon points="250 50, 160 140, 340 140" fill="var(--accent-cyan-glow)" opacity="0.4"/>
+                    <circle cx="250" cy="50" r="8" fill="var(--accent-cyan)"/>
+                    <text x="265" y="55" fill="var(--accent-cyan)" font-family="var(--font-mono)" font-size="9" font-weight="700">VENTILADOR VFD (2.4 m/s)</text>
+                    <text x="180" y="125" fill="var(--text-main)" font-family="var(--font-mono)" font-size="8.5">ITH 67 · ZONA DE CONFORT TÉRMICO</text>
+                  </g>
+                </svg>
+              </div>
+            </div>
+
+            <!-- Right Telemetry & Scientific Zootechnical Sidebar -->
+            <div class="simulator-sidebar">
+              <div>
+                <div class="sidebar-data-group">
+                  <span class="sidebar-category" id="sim-data-cat">Realidad Aumentada (RA) · Campo</span>
+                  <h3 class="sidebar-mode-title" id="sim-data-title">HUD Biométrico y Telemetría en Vivo</h3>
+                  <p class="sidebar-mode-desc" id="sim-data-desc">
+                    Superposición de datos fisiológicos recogidos por sensores IoT y visión artificial con gafas inteligentes: temperatura infrarroja, frecuencia de rumia y score corporal instantáneo.
+                  </p>
+                </div>
+
+                <div class="data-indicators-list" id="sim-indicators-list">
+                  <div class="indicator-item">
+                    <span class="indicator-name">Frecuencia Cardíaca</span>
+                    <span class="indicator-val">72 bpm (Normal)</span>
+                  </div>
+                  <div class="indicator-item">
+                    <span class="indicator-name">Temperatura Superficial</span>
+                    <span class="indicator-val">38.6 °C (Normotermia)</span>
+                  </div>
+                  <div class="indicator-item">
+                    <span class="indicator-name">Score Corporal (BCS)</span>
+                    <span class="indicator-val">3.5 / 5.0 (Óptimo)</span>
+                  </div>
+                  <div class="indicator-item">
+                    <span class="indicator-name">Tiempo de Rumia Diario</span>
+                    <span class="indicator-val">485 min / 24h</span>
+                  </div>
+                </div>
+              </div>
+
+              <div class="sim-interactive-hint" id="sim-dynamic-hint">
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"></circle><line x1="12" y1="16" x2="12" y2="12"></line><line x1="12" y1="8" x2="12.01" y2="8"></line></svg>
+                <span>Haz clic en los modos superiores para alternar entre RA, RV y RM en tiempo real.</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ==================== ETHICS & THE 3Rs IN ZOOTECHNICS ==================== -->
+    <section class="section" id="etica-bienestar">
+      <div class="container">
+        <div class="section-header">
+          <span class="section-subtitle">Compromiso Bioético</span>
+          <h2 class="section-title">El Principio de las 3Rs del Bienestar Animal</h2>
+          <p class="section-description">
+            La adopción de tecnologías inmersivas en la educación zootécnica no solo moderniza el aprendizaje, sino que lidera el cambio hacia una ciencia ética y compasiva.
+          </p>
+        </div>
+
+        <div class="ethics-grid">
+          <div class="ethics-card">
+            <div class="ethics-card-number">01</div>
+            <h3 class="ethics-title">Reemplazar</h3>
+            <p class="ethics-desc">
+              Sustituir el uso de animales vivos en prácticas invasivas o repetitivas mediante modelos holográficos 3D de alta fidelidad fisiológica y simuladores virtuales interactivos.
+            </p>
+          </div>
+
+          <div class="ethics-card">
+            <div class="ethics-card-number">02</div>
+            <h3 class="ethics-title">Reducir</h3>
+            <p class="ethics-desc">
+              Minimizar drásticamente la cantidad de animales requeridos en las prácticas de docencia. Cientos de estudiantes pueden practicar simultáneamente en entornos digitales sin desgaste biológico.
+            </p>
+          </div>
+
+          <div class="ethics-card">
+            <div class="ethics-card-number">03</div>
+            <h3 class="ethics-title">Refinar</h3>
+            <p class="ethics-desc">
+              Optimizar los métodos de enseñanza asegurando que el estudiante adquiera destreza, sensibilidad táctil y precisión técnica en simulación antes de realizar su primera intervención en granja.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ==================== STUDENT ROADMAP / HOW TO START ==================== -->
+    <section class="section perspective-section" id="guia-estudiante">
+      <div class="container">
+        <div class="section-header">
+          <span class="section-subtitle">Ruta de Aprendizaje</span>
+          <h2 class="section-title">¿Cómo Empezar como Estudiante Hoy?</h2>
+          <p class="section-description">
+            No necesitas un presupuesto exorbitante para iniciarte en las tecnologías inmersivas de la zootecnia. Sigue esta hoja de ruta práctica.
+          </p>
+        </div>
+
+        <div class="guide-container">
+          <div class="guide-steps-grid">
+            <div class="guide-step-card">
+              <div class="step-number-badge">1</div>
+              <h4 class="step-title">Tu Smartphone como Escáner</h4>
+              <p class="step-desc">
+                Usa aplicaciones gratuitas de fotogrametría (Polycam, Luma AI o Scaniverse) para crear modelos 3D de cráneos, pezuñas o forrajes con la cámara de tu móvil.
+              </p>
+            </div>
+
+            <div class="guide-step-card">
+              <div class="step-number-badge">2</div>
+              <h4 class="step-title">Explora Repositorios 3D Abiertos</h4>
+              <p class="step-desc">
+                Descarga modelos anatómicos veterinarios y zootécnicos abiertos en plataformas como Sketchfab y visualízalos en RA proyectados sobre el suelo de tu habitación.
+              </p>
+            </div>
+
+            <div class="guide-step-card">
+              <div class="step-number-badge">3</div>
+              <h4 class="step-title">Visores Móviles Accesibles</h4>
+              <p class="step-desc">
+                Aprovecha gafas VR tipo Cardboard o visores standalone para experimentar visitas 360° a granjas lecheras y plantas de procesamiento desde YouTube VR.
+              </p>
+            </div>
+
+            <div class="guide-step-card">
+              <div class="step-number-badge">4</div>
+              <h4 class="step-title">Perfil de Zootecnista 4.0</h4>
+              <p class="step-desc">
+                Combina tu conocimiento en nutrición, genética y bienestar con habilidades en análisis de datos IoT, sensores LiDAR y modelado espacial.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ==================== FAQ ACCORDION ==================== -->
+    <section class="section" id="faq">
+      <div class="container">
+        <div class="section-header">
+          <span class="section-subtitle">Resolviendo Dudas</span>
+          <h2 class="section-title">Preguntas Frecuentes</h2>
+          <p class="section-description">
+            Respuestas a las inquietudes más comunes sobre la implementación de RA, RV y RM en la vida académica y profesional de la zootecnia.
+          </p>
+        </div>
+
+        <div class="faq-list">
+          <div class="faq-item">
+            <button class="faq-question">
+              <span>¿Qué hardware se utiliza en el campo ganadero para Realidad Aumentada?</span>
+              <svg class="faq-icon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="6 9 12 15 18 9"></polyline></svg>
+            </button>
+            <div class="faq-answer">
+              <p>En explotaciones ganaderas se utilizan gafas industriales resistentes al polvo y salpicaduras (como RealWear Navigator, Vuzix Shield o Magic Leap 2) así como tabletas y teléfonos reforzados equipados con sensores LiDAR. Permiten al zootecnista mantener las manos libres para manejar animales o instrumental.</p>
+            </div>
+          </div>
+
+          <div class="faq-item">
+            <button class="faq-question">
+              <span>¿Puede la simulación XR sustituir completamente la práctica con animales reales?</span>
+              <svg class="faq-icon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="6 9 12 15 18 9"></polyline></svg>
+            </button>
+            <div class="faq-answer">
+              <p>No la sustituye al 100%, pero optimiza la curva de aprendizaje. La simulación XR prepara al estudiante para que cuando tenga su primera experiencia con un animal vivo, ya domine la anatomía, sepa exactamente qué esperar y realice el procedimiento con calma, reduciendo al mínimo el estrés del animal.</p>
+            </div>
+          </div>
+
+          <div class="faq-item">
+            <button class="faq-question">
+              <span>¿Cómo ayuda la Realidad Mixta en la formulación de dietas y nutrición animal?</span>
+              <svg class="faq-icon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="6 9 12 15 18 9"></polyline></svg>
+            </button>
+            <div class="faq-answer">
+              <p>Permite visualizar el modelo cinético de fermentación ruminal de forma interactiva: al ajustar proporciones de carbohidratos solubles, fibra detergente neutra (FDN) o proteína degradable en rumen, el modelo holográfico muestra en tiempo real cómo varía el pH ruminal, la síntesis de proteína microbiana y el gasto energético.</p>
+            </div>
+          </div>
+
+          <div class="faq-item">
+            <button class="faq-question">
+              <span>¿Qué software y aplicaciones abiertas existen para estudiantes?</span>
+              <svg class="faq-icon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="6 9 12 15 18 9"></polyline></svg>
+            </button>
+            <div class="faq-answer">
+              <p>Herramientas como Blender para visualización anatómica 3D, Unity con AR Foundation para prototipar simuladores educativos, y plataformas como Sketchfab, 3D Organon Animal y aplicaciones de anatomía veterinaria disponibles en iOS y Android con soporte ARCore y ARKit.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ==================== CALL TO ACTION BANNER ==================== -->
+    <section class="section">
+      <div class="container">
+        <div class="cta-banner">
+          <h2 class="cta-title">Lidera la Transformación de la Ciencia Animal</h2>
+          <p class="cta-subtitle">
+            El futuro de la zootecnia no es esperar a que la tecnología llegue: es formarse hoy con las herramientas que dominarán la producción y el bienestar animal en las próximas décadas.
+          </p>
+          <a href="#simulador" class="btn btn-primary">
+            <span>Volver al Simulador Interactivo</span>
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="9 18 15 12 9 6"></polyline></svg>
+          </a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- ==================== FOOTER ==================== -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <a href="#" class="brand-logo">
+            <div class="brand-icon">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2">
+                <polygon points="12 2 2 7 12 12 22 7 12 2"></polygon>
+                <polyline points="2 17 12 22 22 17"></polyline>
+                <polyline points="2 12 12 17 22 12"></polyline>
+              </svg>
+            </div>
+            <span class="brand-text">ZOO<span>·XR</span></span>
+          </a>
+          <p>
+            Plataforma educativa y divulgativa especializada en la convergencia de Realidad Aumentada, Virtual y Mixta aplicada a la Zootecnia y bienestar animal.
+          </p>
+        </div>
+
+        <div>
+          <h4 class="footer-heading">Tecnologías</h4>
+          <ul class="footer-links">
+            <li><a href="#tecnologias">Realidad Aumentada (RA)</a></li>
+            <li><a href="#tecnologias">Realidad Virtual (RV)</a></li>
+            <li><a href="#tecnologias">Realidad Mixta (RM)</a></li>
+            <li><a href="#simulador">Gemelos Digitales Ganaderos</a></li>
+          </ul>
+        </div>
+
+        <div>
+          <h4 class="footer-heading">Vida Zootécnica</h4>
+          <ul class="footer-links">
+            <li><a href="#perspectivas">Para Estudiantes</a></li>
+            <li><a href="#perspectivas">Para Profesionales de Campo</a></li>
+            <li><a href="#etica-bienestar">Las 3Rs del Bienestar Animal</a></li>
+            <li><a href="#guia-estudiante">Hoja de Ruta Tecnológica</a></li>
+          </ul>
+        </div>
+
+        <div>
+          <h4 class="footer-heading">Recursos</h4>
+          <ul class="footer-links">
+            <li><a href="#simulador">Simulador Interactivo</a></li>
+            <li><a href="#faq">Preguntas Frecuentes</a></li>
+            <li><a href="https://github.com" target="_blank" rel="noopener">Código Abierto</a></li>
+            <li><a href="#top">Volver Arriba</a></li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <p>&copy; 2026 ZOO·XR. Diseñado para el progreso de la Zootecnia y la Ciencia Animal.</p>
+        <p>100% HTML5 · CSS Minimalista · Gráficos Vectoriales SVG · Modo Claro/Oscuro</p>
+      </div>
+    </div>
+  </footer>
+
+  <script src="app.js"></script>
+</body>
+</html>
